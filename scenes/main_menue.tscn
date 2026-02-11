@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dwojxs0t7a6ll"]
+
+[ext_resource type="Texture2D" uid="uid://co2bm01obs10i" path="res://assets/Sprites/Backgrounds/background_solid_sky.png" id="1_6tihl"]
+[ext_resource type="Script" uid="uid://xc6rgo8af6qk" path="res://scripts/main_menue.gd" id="1_gnign"]
+[ext_resource type="FontFile" uid="uid://b5u7ku3jaefxd" path="res://assets/Fonts/Quicksand-VariableFont_wght.ttf" id="2_gnign"]
+
+[node name="MainMenue" type="Control" unique_id=1769918861]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gnign")
+
+[node name="Background" type="TextureRect" parent="." unique_id=249140824]
+layout_mode = 0
+offset_right = 1198.0
+offset_bottom = 718.0
+texture = ExtResource("1_6tihl")
+
+[node name="Menue" type="MarginContainer" parent="." unique_id=988316478]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1153.0
+offset_bottom = 678.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menue" unique_id=526820810]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Menue/VBoxContainer" unique_id=1225947547]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gnign")
+theme_override_font_sizes/font_size = 50
+text = "Platformer
+
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="Menue/VBoxContainer" unique_id=615691873]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0.9499975, 0.9499975, 1)
+theme_override_fonts/font = ExtResource("2_gnign")
+theme_override_font_sizes/font_size = 36
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="Menue/VBoxContainer" unique_id=1432101315]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.54509807, 0, 1)
+theme_override_fonts/font = ExtResource("2_gnign")
+theme_override_font_sizes/font_size = 36
+text = "Quit"

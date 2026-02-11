@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://jngd0b8bsbpv"]
+
+[ext_resource type="PackedScene" uid="uid://pbmoqjvodepq" path="res://scenes/player.tscn" id="1_014kd"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_014kd"]
+distance = -78.0
+
+[node name="Level_1" type="Node2D" unique_id=1682510362]
+
+[node name="Label" type="Label" parent="." unique_id=834021023]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Level 1"
+
+[node name="Player" parent="." unique_id=443332381 instance=ExtResource("1_014kd")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player" unique_id=62193317]
+shape = SubResource("WorldBoundaryShape2D_014kd")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=842783315]
